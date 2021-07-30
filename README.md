@@ -2,7 +2,7 @@
 
 ## Entrega primera semana
 
-![imagen](https://user-images.githubusercontent.com/50089089/127596038-99a42f04-5d0d-4565-8c90-d797ede2b111.png)
+![diagramas](https://user-images.githubusercontent.com/34004989/127600153-1d2264f7-50c7-4a57-ab92-2d517899aed9.png)
 
 ### REACT
 * El mantenedor en React consiste de 4 componentes principales. Un index desde donde se instancia el componente principal App, desde el cual se instancian un componente Formulario y un componente Lista.
