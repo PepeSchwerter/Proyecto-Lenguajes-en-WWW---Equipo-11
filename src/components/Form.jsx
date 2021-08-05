@@ -5,13 +5,17 @@ export const Form = ({ addEncuesta }) => {
     const desc = useRef("");
     const handleOnSubmit = (e) => {
         e.preventDefault();
-        addEncuesta({title: title.current.value, description: desc.current.value});
+        addEncuesta({titulo: title.current.value, descripcion: desc.current.value});
     }
     return (
-        <div>
+        <div className="form">
             <form onSubmit={(e) => handleOnSubmit(e)}>
-                <input type="text" name="" id="" placeholder="Título" ref={title}/>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Descripción" ref={desc}></textarea>
+                <span className="form-desc">Nueva encuesta</span>
+                <h1>Crear nueva encuesta</h1>
+                <label htmlFor="">Título</label>
+                <input type="text" name="" id="" ref={title}/>
+                <label htmlFor="">Descripción</label>
+                <textarea name="" id="" cols="30" rows="10" ref={desc}></textarea>
                 <input type="submit" value="Enviar"/>
             </form>
         </div>

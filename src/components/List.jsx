@@ -1,11 +1,12 @@
 export const List = ({ encuestas }) => {
     return (
-        <div>
+        <div className="list">
             <ul>
+            <h1>Encuestas ingresadas</h1>
             {encuestas.map((encuesta) => (
                 <li>
-                    <strong>{encuesta.title}:</strong>
-                    <span>{encuesta.description}</span>
+                    <strong>{encuesta.titulo}:</strong>
+                    <span>{encuesta.descripcion}</span>
                 </li>
             ))}
             </ul>

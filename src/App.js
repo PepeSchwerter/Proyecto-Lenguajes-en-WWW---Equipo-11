@@ -6,13 +6,18 @@ import { List } from "./components/List";
 
 function App() {
   const [encuestas, setEncuestas] = useState([]);
-  const addEncuesta = (encuesta) => {
+  const addEncuesta = async (encuesta) => {
     setEncuestas([...encuestas, encuesta])
+    try {
+      const res = await axios.post("https://fsakd9q7kc.execute-api.us-east-2.amazonaws.com/test-tarea-www/encuesta", encuesta); 
+    } catch (error) {
+      console.log(error);
+    } 
   }
 
   const getEncuestas = async () => {
     const encuestas = await axios.get("https://fsakd9q7kc.execute-api.us-east-2.amazonaws.com/test-tarea-www/encuesta");
-    setEncuestas(encuestas.data);
+    setEncuestas(JSON.parse(encuestas.data.body));
   }
 
   useEffect(getEncuestas, []) 
